@@ -1,0 +1,71 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title%}{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
+{{ moment.locale('pt') }}
+{% endblock %}
+
+{% block navbar %}
+<ul class="nav nav-pills col-md-3 col-md-offset-8" style="margin-top:5px">
+  <li role="presentation" class="active"><a href="{{ url_for('index') }}">Home</a></li>
+  <li role="presentation" ><a href="{{ url_for('how_to') }}">Como Usar</a></li>
+  <li role="presentation" class="disabled"><a href="#">Sobre</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h3>Entre com os textos a serem comparados:</h3>
+        {{ wtf.quick_form(form) }}
+    </div>    
+</div>
+
+<div class="container col-md-6 col-md-offset-3">
+    {% if is_fraud != -1%}
+        {% if is_fraud == 1 %}
+        <p><center><b>Parece plágio!</b></center></p>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='no.ico') }}" type="image/x-icon">
+        <link rel="icon" href="{{ url_for('static', filename='no.ico') }}" type="image/x-icon">
+        {% elif is_fraud == 0 %}             
+            <p><center><b>Não parece plágio!</b></center></p>
+            <link rel="shortcut icon" href="{{ url_for('static', filename='yes.ico') }}" type="image/x-icon">
+            <link rel="icon" href="{{ url_for('static', filename='yes.ico') }}" type="image/x-icon">
+        {% endif %}
+    {% endif %}
+</div>
+</div>
+
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning col-md-6 col-md-offset-3">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+{% endfor %}
+{% endblock %}
+
+<hr>
+<br>
+
+{%  block body %}
+{{ super() }}
+<div class="container col-md-6 col-md-offset-3">
+    <div>
+        <small>
+            <p><center>{{ moment(current_time).format('LL') }}</center></p>
+        </small>
+    </div>
+</div>
+{% endblock %}
+
+
+

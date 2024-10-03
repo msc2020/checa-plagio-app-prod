@@ -1,0 +1,5 @@
+.venv
+.space
+.env
+__pycache__
+notebooks

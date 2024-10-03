@@ -1,0 +1,7 @@
+Flask
+Flask-Bootstrap # extension to bootstrap (css, styles, navbar, etc)
+Flask-Moment # extension for manipulate datetime
+Flask-WTF # to handling web forms
+environs==9.5.0
+requests
+waitress

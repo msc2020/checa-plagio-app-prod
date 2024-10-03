@@ -1,0 +1,24 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title%}Como Usar o Checador de Plágio Simples - versão β{% endblock %}
+
+{% block navbar %}
+<ul class="nav nav-pills col-md-3 col-md-offset-8" style="margin-top:5px">
+    <li role="presentation"><a href="{{ url_for('index') }}">Home</a></li>
+    <li role="presentation" class="active"><a href="{{ url_for('how_to') }}">Como Usar</a></li>
+    <li role="presentation" class="disabled"><a href="#">Sobre</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="container col-md-9 col-md-offset-1">
+    <p style="margin-top:7px"><h4>Siga os passos abaixo para usar este app.</h4><p>
+        <div class="thumbnail">
+            
+            <img src="{{ url_for('static', filename='how_to.gif') }}">
+            {# <img src="{{ url_for('static', filename='how_to.gif') }}" style="max-width:40%; height:auto;"> #}
+        </div>
+    </div>    
+</div>
+{% endblock %}
