@@ -1,16 +1,16 @@
 
-### Navegue online: https://checaplagio-1-a4780033.deta.app/
+### Navegue online: https://checa-plagio-app.up.railway.app/
 
 ## Como rodar
 
 **1. Acessar o endereço onde o APP está rodando:**
-- Abrir navegador web e entrar em `https://checaplagio-1-a4780033.deta.app/`.
+- Abrir navegador web e entrar no app.
 
 **2. Executar uma requisição:**
- - Inserir `texto original` e `texto suspeito de plágio` na aba `Home` em `https://checaplagio-1-a4780033.deta.app/`.
+ - Inserir `texto original` e `texto suspeito de plágio` na aba `Home`.
  - Clicar no botão `Checar`.
 
- **3. Na asba `Como usar` do APP (`https://checaplagio-1-a4780033.deta.app/how_to`) há exemplos para ajudar.**
+ **3. Na asba `Como usar` do APP (`https://checa-plagio-app.up.railway.app//how_to`) há exemplos para ajudar.**
 
 
 <hr>
